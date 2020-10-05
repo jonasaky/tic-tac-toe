@@ -1,0 +1,164 @@
+  body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    /* margin: 20px; */
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+    background-color: #000;
+    color: #fff;
+    display: block;
+    padding: .5em;
+  }
+  
+  h1:nth-child(2) {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    clip-path: inset(-1% -1% 50% -1%); 
+    /* // Added the negative values to prevent icky "bleed" in Chrome */
+  }
+  
+  ol, ul {
+    padding-left: 14px;
+    list-style-type: hiragana;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    text-align: center;
+    font-size: xx-large;
+    margin: 10px 0;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 64px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 64px;
+  }
+
+  .square.winner {
+    background: yellow;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  .game-board {
+    margin-top: 50px;
+  }
+
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  .btn {
+    height: 34px;
+    width: 150px;
+  }
+
+  .selected {
+    font-weight: bold;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #f1f1f1; */
+    /* overflow: hidden; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 250px; */
+    width: 100%;
+  }
+
+  .perspective-text {
+    color: peachpuff;
+    font-family: Arial;
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-left: -100px;
+  }
+  
+  .perspective-line {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  p {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .perspective-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);
+  }
+  
+  .perspective-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.337);
+  }
+  
+  .perspective-text:hover p {
+    transform: translate(0, -50px);
+  }
+  
+  .perspective-line:nth-child(1) {
+    left: 29px;
+  }
+  
+  .perspective-line:nth-child(2) {
+    left: 58px;
+    background: #f07e6e;
+  }
+  
+  .perspective-line:nth-child(3) {
+    left: 87px;
+    background: #84cdfa;
+  }
+  
+  .perspective-line:nth-child(4) {
+    left: 116px;
+    background: #5ad1cd;
+  }
+  
+  .perspective-line:nth-child(5) {
+    left: 145px;
+  }
