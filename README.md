@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo of this project [Gato-Game](https://gato-game.netlify.app).
 
 ## Available Scripts
 
